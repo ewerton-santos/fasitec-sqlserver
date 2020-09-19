@@ -1,6 +1,6 @@
 using System;
 
-namespace Fasitec.Business
+namespace Fasitec.Business.Entities
 {
     public class Parcela
     {
