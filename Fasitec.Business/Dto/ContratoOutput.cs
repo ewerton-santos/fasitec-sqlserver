@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Fasitec.Business.Dto
 {
     public class ContratoOutput
@@ -7,5 +9,6 @@ namespace Fasitec.Business.Dto
         public string Banco { get; set; }
         public decimal Valor { get; set; }
         public int QtdeParcelas { get; set; }
+        public ICollection<ParcelaOutput> Parcelas { get; set; }
     }
 }
