@@ -12,6 +12,9 @@ namespace Fasitec.Data.Mapping
             CreateMap<User, UserOutput>().ReverseMap();
             CreateMap<UserInput, UserOutput>().ReverseMap();
 
+            CreateMap<Parcela, ParcelaInput>().ReverseMap();
+            CreateMap<Parcela, ParcelaOutput>().ReverseMap();
+
             CreateMap<Contrato, ContratoInput>().ReverseMap();
             CreateMap<Contrato, ContratoOutput>().ReverseMap();
         }
