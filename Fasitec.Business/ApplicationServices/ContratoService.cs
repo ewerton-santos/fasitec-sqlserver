@@ -39,7 +39,7 @@ namespace Fasitec.Business.ApplicationServices
             return _mapper.Map<ContratoOutput>(novoContrato);
         }
 
-        public ContratoOutput Modify(UserInput contratoInput)
+        public ContratoOutput Modify(ContratoInput contratoInput)
         {           
             var contrato = _mapper.Map<Contrato>(contratoInput);
             var contratoModificado = _contratoRepository.Update(contrato);

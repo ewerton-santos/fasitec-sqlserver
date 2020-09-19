@@ -8,7 +8,7 @@ namespace Fasitec.Business.ApplicationServices
         IQueryable<ContratoOutput> All();        
         ContratoOutput ById(int contratoId);
         ContratoOutput Create(ContratoInput contratoInput);
-        ContratoOutput Modify(UserInput contratoInput);
+        ContratoOutput Modify(ContratoInput contratoInput);
         void Remove(int contratoId);
     }
 }
