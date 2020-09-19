@@ -15,9 +15,23 @@ namespace Fasitec.Api.Config
         public static IServiceCollection ResolveDependencies(this IServiceCollection services)
         {            
             services.AddScoped<Context, Context>();                        
-            services.AddScoped<IRepository<User>, Repository<User>>();
+            
+            //Users
+            services.AddScoped<IRepository<User>, Repository<User>>();   
             services.AddScoped<IUserRepository, UserRepository>();            
             services.AddScoped<IUserFacade, UserService>(); 
+            
+            //Parcela
+            services.AddScoped<IRepository<Parcela>, Repository<Parcela>>();
+            services.AddScoped<IParcelaRepository, ParcelaRepository>();   
+            services.AddScoped<IParcelaFacade, ParcelaService>(); 
+            
+            //Contrato
+            services.AddScoped<IRepository<Contrato>, Repository<Contrato>>();
+            services.AddScoped<IContratoRepository, ContratoRepository>();   
+            services.AddScoped<IContratoFacade, ContratoService>(); 
+            
+            
             services.AddScoped<IUnitOfWork, UnitOfWork>(); 
 
             return services; 
