@@ -10,6 +10,7 @@ namespace Fasitec.Data
 
         }
         public DbSet<User> Users { get;set; }
+        public DbSet<Parcela> Parcelas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -23,7 +24,17 @@ namespace Fasitec.Data
             modelBuilder.Entity<User>()
             .Property(p => p.Email)
             .HasMaxLength(100)
-            .IsRequired();            
+            .IsRequired();  
+
+            modelBuilder.Entity<Parcela>()
+            .HasKey(k => k.ParcelaId);
+
+            modelBuilder.Entity<Contrato>()
+            .HasKey(k => k.ContratoId);
+            modelBuilder.Entity<Contrato>()
+            .HasIndex(p => p.Numero)
+            .IsUnique();
+
         }
     }
 }
